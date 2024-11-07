@@ -75,6 +75,22 @@ function redirect() {
         return true;
     } else {
         message.classList.add('hidden');
+
+        const linksDiv = document.getElementById('links');
+        if (linksDiv) {
+            linksDiv.innerHTML = '<h2>External guidance and links</h2><ul></ul>';
+            for (const key in redirects) {
+                if (redirects.hasOwnProperty(key)) {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = redirects[key].url;
+                    link.textContent = redirects[key].title;
+                    listItem.appendChild(link);
+                    linksDiv.querySelector('ul').appendChild(listItem);
+                }
+            }
+            linksDiv.classList.remove('hidden');
+        }
     }
     return false;
 };
