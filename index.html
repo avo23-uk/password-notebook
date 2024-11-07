@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Password Notebook</title>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004aad;
+            color: #FFFFFF;
+            font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .logo {
+            margin: 1em auto;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #redirect-message {
+            background: black;
+            padding: 1em;
+            margin: 0 0.8em;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        a {
+            color: #FFFFFF;
+        }
+    </style>
+    <script src="redirect.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img width="175" height="175"
+                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAACXBIWXMAAAdiAAAHYgE4epnbAAAEWmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI0LTExLTA3PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkV4dElkPjE8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOnRpdGxlPgogICA8cmRmOkFsdD4KICAgIDxyZGY6bGkgeG1sOmxhbmc9J3gtZGVmYXVsdCc+VW50aXRsZWQgZGVzaWduIC0gMTwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6cGRmPSdodHRwOi8vbnMuYWRvYmUuY29tL3BkZi8xLjMvJz4KICA8cGRmOkF1dGhvcj5PbGxpZSBDaGFsazwvcGRmOkF1dGhvcj4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6eG1wPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvJz4KICA8eG1wOkNyZWF0b3JUb29sPkNhbnZhIChSZW5kZXJlcik8L3htcDpDcmVhdG9yVG9vbD4KIDwvcmRmOkRlc2NyaXB0aW9uPgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSdyJz8+L8z07QAAAtNQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////4izIpgAAAPB0Uk5TAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0/QEFCQ0RFRkdISUpLTU5PUFFSU1RVVldYWVtcXV5fYGFiY2RnaGlqa2xub3Bxc3R1dnd8fX5/gIGCg4WGh4iJioyNjo+QkZKTlJWWl5iZmpucnZ6foKGio6Slpqeoqqusra6vsLGys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zNzs/Q0dLT1NXW19jZ2tvc3d7g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+MAqH1gAADHFJREFUeNrt3fmfV1Udx3EXICCJTYkwmAAzlgSChBBIZCARQYEKLAURIUBHQEOiQoFYQrNAiZhRAmI3NJbAGXanQWQRWUzud+Y7C7MxC7PcP6Ex+qWH8/3ez3fuOZfDua/nH3C+j8d5v+c793vvOefecgsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANAl2Q3S1cJc59K5U1nHMva888pz43/wTQIIVwG+7PLhjctmDb+bIMJagP8pPLg6ZWTSreQR1gJcV3Z0+dg2ZBLeAnyhNmvpY5QgxAX4r6ylo5uRTYgLUKdk3ajGxBPiAtTJ/+PQ20goxAWo4ywdQEZhLkCdk5P4VxDqArju5blfI6gwF8B1ixd3IKowF8B1q9bdR1hhLkCd1PbEFeoCuCUvNCKwMBfAdc88RGKKtZ4w9/Wdp67eNBXY2JHMdGjbd+zzSzdnFpjfgNLxpKVR814jZyz668GcBmVTUxnLtWtV1TU1tWoq8DoxBaBb8tTfpO7/PKFkKhwvkWheQWHJ1fJrvhqQ2YV8AtPlwckvv3VaFky5IxctKC5rcA2KxhJMoKarL8B1ucUVDfu/sLwJqQRoinBFl9MQecUVDWjAUVYNBegpnQWok12U+H+DT3g6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"
+                 alt="Password Notebook logo (keyhole inside the space the letter 'P')" />
+        </div>
+
+        <h1>Password Notebook</h1>
+    </header>
+
+    <div class="container">
+        <p id="redirect-message" class="hidden">Redirecting you to the <a id="redirect-url" href="#"><span id="redirect-dest">external</span></a> website in <span id="countdown">10</span> seconds...</p>
+
+        <p>
+            Keep your passwords safe and easy to find with our special notebook. It has pages for every letter A to Z and numbers 0 to 9, so you can organise over 500 accounts. Each page lets you write down the service name, username or
+            email, password, and notes.
+        </p>
+        <p>
+            Plus, learn simple tips on creating strong passwords and why using multi-factor authentication is important. Throughout the notebook, find easy advice to help you stay safe online and protect your information.
+        </p>
+        <p>
+            The notebook opens flat for easy writing. Use it to keep all your important account details in one place and discover ways to secure your accounts!
+        </p>
+    </div>
+
+    <footer class="container">
+        <p>&copy; <span class="year-now">2024</span> password-notebook.com, an <a href="https://avo23.uk">avo23.uk</a> product.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var yearNow = new Date().getFullYear();
+            document.querySelector('.year-now').textContent = yearNow;
+        });
+    </script>
+</body>
+
+</html>
