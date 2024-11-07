@@ -18,13 +18,29 @@ function redirect() {
             url: 'https://ncsc.gov.uk',
             title: 'National Cyber Security Centre (NCSC)'
         },
-        'example': {
-            url: 'https://example.com',
-            title: 'Example'
+        'ncsc-cyber-aware': {
+            url: 'https://www.ncsc.gov.uk/cyberaware/home',
+            title: 'National Cyber Security Centre (NCSC) Cyber Aware advice'
+        },
+        'uksic': {
+            url: 'https://saferinternet.org.uk/',
+            title: 'UK Safer Internet Centre (UKSIC)'
+        },
+        'moz-mon': {
+            url: 'https://monitor.mozilla.org/',
+            title: 'Mozilla Monitor'
+        },
+        'ico': {
+            url: 'https://ico.org.uk/for-the-public/online/',
+            title: 'Information Commissioner\'s Office (ICO)'
         },
         'hibp': {
             url: 'https://haveibeenpwned.com/',
             title: 'Have I Been Pwned'
+        },
+        'ageuk': {
+            url: 'https://www.ageuk.org.uk/information-advice/work-learning/technology-internet/internet-security/',
+            title: 'Age UK'
         }
     };
 
